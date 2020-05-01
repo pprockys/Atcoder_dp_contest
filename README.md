@@ -1,2 +1,2 @@
 # Atcoder_dp_contest
-This repo contains all problems from Atcoder dp contest
+This repo contains all problems solution from Atcoder dp contest
