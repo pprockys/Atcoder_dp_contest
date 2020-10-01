@@ -7,12 +7,15 @@ int main() {
 	cin>>n;
 	ll a[n];
 	for(ll i=0;i<n;i++)cin>>a[i];
-	ll dp[n];
-	dp[0]=0;
-	dp[1]=abs(a[0]-a[1]);
+	ll x,y,temp;
+	x=0;
+	y=abs(a[0]-a[1]);
 	for(ll i=2;i<n;i++)
 	{
-	    dp[i]=min(dp[i-1]+abs(a[i]-a[i-1]),dp[i-2]+abs(a[i]-a[i-2]));
+	    temp=min(y+abs(a[i]-a[i-1]),x+abs(a[i]-a[i-2]));
+		x=y;
+		y=temp;
+		
 	}
-	cout<<dp[n-1];
+	cout<<y;
 }
